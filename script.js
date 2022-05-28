@@ -3,9 +3,9 @@ function showMessage() {
 }
 
 function compute() {
-  p = document.getElementById("principal").value;
 
   var principal = document.getElementById("principal").value;
+
   if(parseInt(principal) < 1) {
       alert("Enter a valid positive number");
       document.getElementById("principal").focus();
@@ -17,7 +17,17 @@ function compute() {
   var interest = (principal * years * rate) / 100;
 
   var today = newDate();
-  var year = newDate().getFullYear() + parseInt(years);
+  var yearN = parseInt(today.getFullYear()) + parseInt(years);
+
+  document.getElementById("depositmessage").innerHTML = "" + principal;
+  document.getElementById("interestmessage").innerHTML = "" + rate;
+  document.getElementById("amountmessage").innerHTML = "" + interest;
+  document.getElementById("yearmessage").innerHTML = "" + yearN;
+  showMessage();
+
+  return false;
+
+
 };
 
 function updateRate() {
