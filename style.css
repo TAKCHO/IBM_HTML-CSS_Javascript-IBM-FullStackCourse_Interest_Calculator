@@ -17,3 +17,8 @@ h1 {
   margin: auto;
   line-height: 2rem;
 }
+
+.footer {
+  padding: 0 10px;
+  margin: 30px 20px;
+}
