@@ -4,7 +4,6 @@ function showMessage() {
 
 function compute() {
   var principal = document.getElementById("principal").value;
-
   if (parseInt(principal) < 1) {
     alert("Enter a positive number");
     document.getElementById("principal").focus();
@@ -17,12 +16,12 @@ function compute() {
   var interest = (principal * years * rate) / 100;
 
   var today = new Date();
-  var yearN = parseInt(today.getFullYear()) + parseInt(years);
+  var yearOfWithdrawal = parseInt(today.getFullYear()) + parseInt(years);
 
-  document.getElementById("depositValue").innerHTML = "" + principal;
-  document.getElementById("interestValue").innerHTML = "" + rate;
-  document.getElementById("amount").innerHTML = "" + interest;
-  document.getElementById("yearReceive").innerHTML = "" + yearN;
+  document.getElementById("depositmessage").innerHTML = "" + principal;
+  document.getElementById("interestmessage").innerHTML = "" + rate;
+  document.getElementById("amountmessage").innerHTML = "" + interest;
+  document.getElementById("yearmessage").innerHTML = "" + yearOfWithdrawal;
   showMessage();
 
   return false;
